@@ -197,8 +197,8 @@
       let parts = [];
       if (activeTab === 'image') {
         if (!imageBase64) { showError('⚠️ Please upload a book page image!'); btn.disabled=false; btn.innerHTML='🧠 Generate 10 MCQs'; return; }
-        parts.push({ inline_data: { mime_type: imageMime, data: imageBase64 } });
-      }
+        parts.push({ inline_data: 
+      }parts.push({ inlineData: { mimeType: imageMime, data: imageBase64 } });
       const topicText = document.getElementById('topicText').value.trim();
       const prompt = activeTab === 'image'
         ? `Read this book page image and generate exactly 10 MCQ questions from its content. Respond ONLY with a JSON array (no markdown, no backticks): [{"question":"...","options":["A)...","B)...","C)...","D)..."],"answer":"A","explanation":"..."}]`
